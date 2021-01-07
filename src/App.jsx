@@ -8,8 +8,13 @@ export default function App() {
     <Layout>
       <Suspense fallback="Loading...">
         <Switch>
-          {routes.map(({ path, exact, component }) => (
-            <Route path={path} exact={exact} component={component} />
+          {routes.map(({ path, exact, component }, index) => (
+            <Route
+              key={index}
+              path={path}
+              exact={exact}
+              component={component}
+            />
           ))}
         </Switch>
       </Suspense>

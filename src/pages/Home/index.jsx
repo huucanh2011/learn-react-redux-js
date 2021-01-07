@@ -1,13 +1,16 @@
 import React from "react";
-import { Button } from "../../components/Button";
-import { Link } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
+import { AddPost } from "../../components";
 
 export default function HomePage() {
   return (
     <div>
-      <h1>Home Page</h1>
-      <Link to="/auth">Auth</Link>
-      <Button type="primary">Test</Button>
+      <AddPost />
+
+      <div className="bg-white rounded-md p-2">
+        {/* <Skeleton count={5} /> */}
+      </div>
+      
     </div>
   );
 }

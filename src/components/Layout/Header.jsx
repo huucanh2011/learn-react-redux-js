@@ -1,31 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-const rightMenuLinks = [
-  {
-    name: "Đăng nhập",
-    path: "/auth",
-  },
-  {
-    name: "Đăng ký",
-    path: "/auth",
-  },
-];
+import MiddleHeader from "./core/MiddleHeader";
+import RightHeader from "./core/RightHeader";
+import SearchBox from "./core/SearchBox";
+import { FcMenu } from "react-icons/fc";
 
 export default function Header() {
   return (
     <header className="flex items-center w-full fixed h-12 bg-white border-gray-100 border-b z-30 shadow-sm">
-      <div className="w-full md:w-11/12 mx-auto flex items-center justify-between md:px-1">
-        <div className="font-bold">
-          <Link to="/">LOGO</Link>
+      <div className="w-full md:w-11/12 mx-auto flex items-center md:px-1 sm:px-2">
+        <div className="flex items-center w-full lg:w-1/3 px-2 md:px-0">
+          <Link className="text-2xl font-bold mr-0 md:mr-2" to="/">
+            LOGO
+          </Link>
+          <SearchBox />
+          <button className="block lg:hidden border-2 border-gray-200 rounded-md p-1 hover:border-gray-400 focus:outline-none">
+            <FcMenu className="text-xl" />
+          </button>
         </div>
-
-        <div className="py-4">
-          {rightMenuLinks.map((link, index) => (
-            <Link className="bg-green-500 text-white py-1 px-2 hover:bg-green-600 text-sm rounded-full mr-4" key={index} to={link.path}>
-              {link.name}
-            </Link>
-          ))}
+        <div className="hidden lg:block w-0 lg:w-1/3">
+          <MiddleHeader />
+        </div>
+        <div className="hidden lg:block w-0 lg:w-1/3">
+          <RightHeader />
         </div>
       </div>
     </header>
