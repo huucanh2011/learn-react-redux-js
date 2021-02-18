@@ -20,7 +20,7 @@ export function AddPost() {
   return (
     <>
       <div className="flex items-center w-full bg-white py-2 px-4 rounded-md shadow mb-2">
-        <FaUserCircle className="text-4xl text-green-500" />
+        <FaUserCircle className="text-4xl text-blue-500" />
         <input
           type="text"
           className="bg-gray-200 w-full rounded-full py-1 px-4 ml-4 focus:outline-none"

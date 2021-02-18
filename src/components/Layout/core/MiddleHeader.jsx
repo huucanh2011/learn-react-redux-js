@@ -26,7 +26,7 @@ export default function MiddleHeader() {
   return (
     <div className="flex justify-center">
       {links.map((link, index) => (
-        <NavLink key={index} to={link.path} className="mx-1 md:mx-2 lg:mx-3 py-2 font-semibold whitespace-nowrap text-green-500 hover:text-green-600">
+        <NavLink key={index} to={link.path} className="mx-1 md:mx-2 lg:mx-3 py-2 font-semibold whitespace-nowrap text-gray-400 hover:text-gray-500">
           {link.name}
         </NavLink>
       ))}

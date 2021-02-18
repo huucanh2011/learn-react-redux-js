@@ -12,7 +12,7 @@ Button.propTypes = {
 export function Button({ type, loading, onClick, children }) {
   let color = "bg-gray-400 hover:bg-gray-500";
   if (type === "primary") {
-    color = "bg-green-500 hover:bg-green-600";
+    color = "bg-blue-500 hover:bg-blue-600";
   }
   return (
     <button

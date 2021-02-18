@@ -15,7 +15,7 @@ export default function RightHeader() {
     <div className="flex justify-end">
       {rightMenuLinks.map((link, index) => (
         <Link
-          className="bg-green-500 text-white py-2 px-3 hover:bg-green-600 text-sm rounded-md"
+          className="bg-blue-600 text-white py-1 px-3 hover:bg-blue-700 text-sm rounded-full"
           key={index}
           to={link.path}
         >

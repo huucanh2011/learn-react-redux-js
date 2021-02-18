@@ -3,6 +3,7 @@ import { lazy } from "react";
 const HomePage = lazy(() => import("./pages/Home"));
 const LoginPage = lazy(() => import("./pages/Auth/LoginPage"));
 const RegisterPage = lazy(() => import("./pages/Auth/RegisterPage"));
+const ForgotPasswordPage = lazy(() => import("./pages/Auth/ForgotPasswordPage"));
 const AboutPage = lazy(() => import("./pages/About"));
 const NewPage = lazy(() => import("./pages/New"));
 const TagPage = lazy(() => import("./pages/Tag"));
@@ -22,6 +23,11 @@ export default [
     path: "/register",
     exact: true,
     component: RegisterPage,
+  },
+  {
+    path: "/forgot-password",
+    exact: true,
+    component: ForgotPasswordPage,
   },
   {
     path: "/about",
